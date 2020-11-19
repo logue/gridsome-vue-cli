@@ -1,3 +1,9 @@
+/**
+ * Append GraphQL Rule
+ * @param {*} config
+ * @param {*} type
+ * @param {*} loader
+ */
 function createGraphQLRule(config, type, loader) {
   const re = new RegExp(`blockType=(${type})`);
 
@@ -7,19 +13,19 @@ function createGraphQLRule(config, type, loader) {
     .use('babel-loader')
     .loader('babel-loader')
     .options({
-      presets: [require.resolve('@vue/babel-preset-app')],
+      presets: [require.resolve('@vue/babel-preset-app')]
     })
     .end()
     .use(`${type}-loader`)
     .loader(require.resolve(loader))
     .options({
-      gridsomeGraphqlEndpoint: 'http://localhost:8080/___graphql',
+      gridsomeGraphqlEndpoint: 'http://localhost:8080/___graphql'
     });
 }
 
 module.exports = {
   devServer: {
-    port: 3000,
+    port: 3000
   },
   chainWebpack: (config) => {
     createGraphQLRule(
@@ -27,5 +33,5 @@ module.exports = {
       'static-query',
       'gridsome/lib/plugins/vue-components/lib/loaders/static-query.js'
     );
-  },
+  }
 };

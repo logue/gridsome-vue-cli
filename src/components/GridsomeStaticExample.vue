@@ -34,8 +34,8 @@ export default {
   computed: {
     characters() {
       return this.$static.rickandmorty.characters.results;
-    },
-  },
+    }
+  }
 };
 </script>
 

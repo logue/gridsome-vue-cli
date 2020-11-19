@@ -12,8 +12,8 @@ module.exports = {
       options: {
         url: 'https://rickandmortyapi.com/graphql',
         fieldName: 'rickandmorty',
-        typeName: 'RickAndMorty',
-      },
-    },
-  ],
+        typeName: 'RickAndMorty'
+      }
+    }
+  ]
 };

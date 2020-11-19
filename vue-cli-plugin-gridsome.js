@@ -1,10 +1,22 @@
 const gridsome = require('./node_modules/gridsome/lib/explore');
 
+/**
+ * Gridsome for VueCLI Plugin.
+ */
 class GridsomePlugin {
+  /**
+   * Wait Gridsome function.
+   * @param {*} params
+   * @param {*} callback
+   */
   async waitForGridsome(params, callback) {
     await gridsome(process.cwd());
     callback();
   }
+  /**
+   * Hook vue-cli compiler
+   * @param {*} compiler
+   */
   apply(compiler) {
     compiler.hooks.beforeRun.tapAsync(
       'Gridsome Plugin Build',

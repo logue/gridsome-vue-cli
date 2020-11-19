@@ -1,10 +1,15 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
+    node: true
   },
   plugins: ['vue', 'prettier', 'gridsome'],
-  extends: ['plugin:vue/essential', '@vue/prettier'],
+  extends: [
+    'eslint:recommended',
+    'google',
+    'plugin:vue/essential',
+    '@vue/prettier'
+  ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
@@ -15,13 +20,12 @@ module.exports = {
         htmlWhitespaceSensitivity: 'ignore',
         semi: true,
         singleQuote: true,
-        trailingComma: 'es5',
-        bracketSpacing: false,
-        printWidth: 80,
-      },
-    ],
+        trailingComma: 'none',
+        printWidth: 80
+      }
+    ]
   },
   parserOptions: {
-    parser: 'babel-eslint',
-  },
+    parser: 'babel-eslint'
+  }
 };

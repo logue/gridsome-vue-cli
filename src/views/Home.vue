@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <img alt="Vue logo" src="@/assets/logo.png" />
     <GridsomeStaticExample />
   </div>
 </template>
@@ -12,7 +12,7 @@ import GridsomeStaticExample from '@/components/GridsomeStaticExample.vue';
 export default {
   name: 'home',
   components: {
-    GridsomeStaticExample,
-  },
+    GridsomeStaticExample
+  }
 };
 </script>
