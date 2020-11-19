@@ -7,12 +7,12 @@
 
 <script>
 // @ is an alias to /src
-import GridsomeStaticExample from "@/components/GridsomeStaticExample.vue";
+import GridsomeStaticExample from '@/components/GridsomeStaticExample.vue';
 
 export default {
-  name: "home",
+  name: 'home',
   components: {
-    GridsomeStaticExample
-  }
+    GridsomeStaticExample,
+  },
 };
 </script>

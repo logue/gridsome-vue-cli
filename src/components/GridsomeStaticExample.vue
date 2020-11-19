@@ -3,9 +3,9 @@
     <h1>Gridsome via vue-cli</h1>
     <p>
       Characters from
-      <a href="https://rickandmortyapi.com/graphql"
-        >https://rickandmortyapi.com/graphql</a
-      >
+      <a href="https://rickandmortyapi.com/graphql">
+        https://rickandmortyapi.com/graphql
+      </a>
     </p>
     <ul>
       <li v-for="character in characters" :key="character.id">
@@ -30,12 +30,12 @@
 
 <script>
 export default {
-  name: "GridsomeStaticExample",
+  name: 'GridsomeStaticExample',
   computed: {
     characters() {
       return this.$static.rickandmorty.characters.results;
-    }
-  }
+    },
+  },
 };
 </script>
 

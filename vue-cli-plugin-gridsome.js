@@ -1,4 +1,4 @@
-const gridsome = require("./node_modules/gridsome/lib/explore");
+const gridsome = require('./node_modules/gridsome/lib/explore');
 
 class GridsomePlugin {
   async waitForGridsome(params, callback) {
@@ -7,18 +7,18 @@ class GridsomePlugin {
   }
   apply(compiler) {
     compiler.hooks.beforeRun.tapAsync(
-      "Gridsome Plugin Build",
+      'Gridsome Plugin Build',
       this.waitForGridsome
     );
     compiler.hooks.watchRun.tapAsync(
-      "Gridsome Plugin Serve",
+      'Gridsome Plugin Serve',
       this.waitForGridsome
     );
   }
 }
 
-module.exports = api => {
-  api.chainWebpack(webpackConfig => {
-    webpackConfig.plugin("gridsome").use(GridsomePlugin);
+module.exports = (api) => {
+  api.chainWebpack((webpackConfig) => {
+    webpackConfig.plugin('gridsome').use(GridsomePlugin);
   });
 };

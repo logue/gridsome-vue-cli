@@ -5,15 +5,15 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: "Gridsome",
+  siteName: 'Gridsome',
   plugins: [
     {
-      use: "@gridsome/source-graphql",
+      use: '@gridsome/source-graphql',
       options: {
-        url: "https://rickandmortyapi.com/graphql",
-        fieldName: "rickandmorty",
-        typeName: "RickAndMorty"
-      }
-    }
-  ]
+        url: 'https://rickandmortyapi.com/graphql',
+        fieldName: 'rickandmorty',
+        typeName: 'RickAndMorty',
+      },
+    },
+  ],
 };
