@@ -1,31 +1,30 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
   },
-  plugins: ['vue', 'prettier', 'gridsome'],
   extends: [
-    'eslint:recommended',
-    'google',
+    './node_modules/gts',
     'plugin:vue/essential',
-    '@vue/prettier'
+    '@vue/typescript/recommended',
+    '@vue/prettier',
+    '@vue/prettier/@typescript-eslint',
+    'plugin:gridsome/recommended',
   ],
-  rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'gridsome/format-query-block': 'warn',
-    'prettier/prettier': [
-      'error',
-      {
-        htmlWhitespaceSensitivity: 'ignore',
-        semi: true,
-        singleQuote: true,
-        trailingComma: 'none',
-        printWidth: 80
-      }
-    ]
-  },
   parserOptions: {
-    parser: 'babel-eslint'
-  }
+    ecmaVersion: 2020,
+  },
+  settings: {
+    node: {
+      resolvePaths: [__dirname],
+      tryExtensions: ['.js', '.json', '.node', '.ts'],
+    },
+  },
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'node/no-missing-import': 'off',
+    'node/no-unpublished-import': 'off',
+    'node/no-unsupported-features/es-syntax': 'off',
+  },
 };

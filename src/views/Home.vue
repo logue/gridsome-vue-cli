@@ -5,14 +5,14 @@
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
 import GridsomeStaticExample from '@/components/GridsomeStaticExample.vue';
 
-export default {
-  name: 'home',
+@Component({
   components: {
-    GridsomeStaticExample
-  }
-};
+    GridsomeStaticExample,
+  },
+})
+export default class Home extends Vue {}
 </script>

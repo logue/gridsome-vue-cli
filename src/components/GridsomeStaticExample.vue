@@ -32,10 +32,11 @@
 export default {
   name: 'GridsomeStaticExample',
   computed: {
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     characters() {
       return this.$static.rickandmorty.characters.results;
-    }
-  }
+    },
+  },
 };
 </script>
 

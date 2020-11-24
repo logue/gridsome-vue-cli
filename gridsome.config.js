@@ -6,14 +6,19 @@
 
 module.exports = {
   siteName: 'Gridsome',
+  icon: 'src/assets/favicon.png',
   plugins: [
+    {
+      use: 'gridsome-plugin-typescript',
+    },
+    // Change below
     {
       use: '@gridsome/source-graphql',
       options: {
         url: 'https://rickandmortyapi.com/graphql',
         fieldName: 'rickandmorty',
-        typeName: 'RickAndMorty'
-      }
-    }
-  ]
+        typeName: 'RickAndMorty',
+      },
+    },
+  ],
 };
