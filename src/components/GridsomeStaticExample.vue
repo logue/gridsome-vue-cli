@@ -28,16 +28,17 @@
 }
 </static-query>
 
-<script>
-export default {
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component({
   name: 'GridsomeStaticExample',
-  computed: {
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-    characters() {
-      return this.$static.rickandmorty.characters.results;
-    },
-  },
-};
+})
+export default class GridsomeStaticExample extends Vue {
+  private get characters(): unknown {
+    return this.$static.rickandmorty.characters.results;
+  }
+}
 </script>
 
 <style scoped>
