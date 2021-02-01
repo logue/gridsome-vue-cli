@@ -21,5 +21,6 @@ module.exports = {
     'node/no-missing-import': 'off',
     'node/no-unpublished-import': 'off',
     'node/no-unsupported-features/es-syntax': 'off',
+    'gridsome/use-env-prefix': 'off',
   },
 };
